@@ -23,6 +23,7 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
+app.UseMiddleware<WebApplication1.Middleware.RequestLoggingMiddleware>();
 app.UseWelcomePage("/welcome");
 
 app.UseRouting();
